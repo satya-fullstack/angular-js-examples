@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="../bin/angular.min.js"></script>
+    <script src="../bin/angular.min.js"></script>
+    <script>
+        var simpleController = function ($scope) {
+            // Initialize the model variables
+            $scope.firstName = "Satya";
+            $scope.lastName = "G";
+        };
+    </script>
+</head>
+
+<body ng-app ng-init="firstName = 'Satya'; lastName = 'G';">
+<div ng-controller="simpleController">
+    <strong>First name:</strong> {{firstName}}<br/>
+    <strong>Last name:</strong> <span ng-bind="lastName"></span>
+</div>
+</body>
+</html>

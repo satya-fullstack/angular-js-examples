@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="../bin/angular.min.js"></script>
+    <script>
+        var simpleController = function ($scope)
+        {
+            // Initialize the model variables
+            $scope.firstName = "Satya";
+            $scope.lastName = "G";
+
+            // Define utility functions
+            $scope.getFullName = function ()
+            {
+                return $scope.firstName + " " + $scope.lastName;
+            };
+        };
+    </script>
+</head>
+
+<body ng-app>
+<div ng-controller="simpleController">
+    <strong>First name:</strong> {{firstName}}<br />
+    <strong>Last name:</strong> <span ng-bind="lastName"></span><br />
+    <strong>Full name:</strong> {{getFullName()}}<br />
+    <br />
+    <label>Set the first name: <input type="text" ng-model="firstName"/></label><br />
+    <label>Set the last name: <input type="text" ng-model="lastName"/></label>
+</div>
+</body>
+</html>
